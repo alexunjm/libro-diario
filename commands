@@ -1,1 +1,15 @@
 npm install --save bootstrap
+
+ng generate component component-name
+ng g c component-name
+
+ng g c header --spec=false
+ng g c footer --spec=false
+ng g c main-tabs --spec=false
+ng g c main-tabs/current-month --spec=false
+ng g c main-tabs/accounts-payable --spec=false
+ng g c main-tabs/accounts-receivable --spec=false
+ng g c main-tabs/registry-item --spec=false
+ng g c main-tabs/current-month/month-registry-item --spec=false
+ng g c main-tabs/accounts-payable/ap-registry-item --spec=false
+ng g c main-tabs/accounts-receivable/ar-registry-item --spec=false
