@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
     h3 {
       color: skyblue
     }
+    .grande {
+      font-size: x-large;
+    }
   `]
 })
 export class ServerComponent {
@@ -35,5 +38,9 @@ export class ServerComponent {
 
   coloreame() {
     return this.colors[this.colors.indexOf(this.color) + 1];
+  }
+
+  esRojo() {
+    return this.color === 'red';
   }
 }
