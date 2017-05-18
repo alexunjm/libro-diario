@@ -1,1 +1,6 @@
 npm install --save bootstrap
+
+ng generate component component-name
+ng g c component-name
+
+ng g c servers
