@@ -12,6 +12,12 @@ import { Component } from '@angular/core';
 export class ServerComponent {
   sayHello = true;
   response = 'hola';
+  colors = ['red', 'blue', 'orange'];
+  color = 'white';
+
+  constructor() {
+    this.randomColor();
+  }
 
   answer() {
     this.sayHello = !this.sayHello;
@@ -20,5 +26,14 @@ export class ServerComponent {
     } else {
       this.response = 'hola';
     }
+  }
+
+  randomColor() {
+    const index = Math.floor(Math.random() * (this.colors.length - 1));
+    this.color = this.colors[index];
+  }
+
+  coloreame() {
+    return this.colors[this.colors.indexOf(this.color) + 1];
   }
 }

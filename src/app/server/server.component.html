@@ -1,4 +1,6 @@
-<h3>h1 server</h3>
+<h3>server</h3>
+<h4 [ngStyle]="{backgroundColor: color}">color attribute</h4>
+<h4 [ngStyle]="{backgroundColor: coloreame()}">color function</h4>
 <button type="button" class="btn" (click)="answer()">{{ response }}</button>
 <p *ngIf="sayHello; else sayGoodBye">hola</p>
 <ng-template #sayGoodBye><p>chao!</p></ng-template>
