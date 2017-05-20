@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoggingService } from '../services/logging.service';
 
 @Component({
   selector: '.app-server',
@@ -18,8 +19,9 @@ export class ServerComponent {
   colors = ['red', 'blue', 'orange'];
   color = 'white';
 
-  constructor() {
+  constructor(ls: LoggingService) {
     this.randomColor();
+    ls.message.emit('new server' + Math.random());
   }
 
   answer() {

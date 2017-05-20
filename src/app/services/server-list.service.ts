@@ -10,7 +10,11 @@ export class ServerList {
     'server3',
   ];
 
-  constructor(public logServ: LoggingService) {}
+  constructor(public logServ: LoggingService) {
+    logServ.message.subscribe(
+      (msg: string) => logServ.log(msg)
+    );
+  }
 
   addServer(serverName: string) {
     this.servers.push(serverName);
